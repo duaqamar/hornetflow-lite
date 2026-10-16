@@ -127,4 +127,13 @@ PDF output saved to S3
 Demo features (Creativity & impact, 10%)
 A story at the start: “Students wait 5–7 days for this letter. HornetFlow does it in 60 seconds.”
 Show one success and one rejection (ID 1001 vs 1005). The rejection is what proves the validation works.
-An architecture diagram slide (it’s already in the README).
+An architecture diagram slide 
+
+<img width="1266" height="1562" alt="image" src="https://github.com/user-attachments/assets/54d3abe6-798b-43f5-8fbd-b2c347a04988" />
+
+
+
+
+
+
+
