@@ -91,12 +91,12 @@ This iteration uses a Bedrock Converse tool-calling agent loop. A managed Bedroc
 
 **Must-have (MVP, about 80% of the score)**
 
-1. Two complete workflows (Workflow completeness, 30%)
+**1. Two complete workflows (Workflow completeness, 30%)**
 
 Enrollment verification: asks for the ID → looks up the student → asks the purpose (e.g. landlord) → checks eligibility → generates the letter with a reference number.
 SAP appeal: asks for the ID → explains why aid was suspended (GPA, completion rate) → asks what happened → drafts the personal statement → student approves it → packages the appeal with a checklist of required items.
 
-2. Rule validation (Accuracy & validation, 25%)
+**2. Rule validation (Accuracy & validation, 25%)**
 
 Not enrolled → no letter
 Account hold → blocked, with “contact the Registrar”
@@ -106,16 +106,16 @@ Invalid student ID → handled politely
 
 The rules live in the Lambda, so the AI can’t make them up.
 
-3. Guided conversation (Student experience, 20%)
+**3. Guided conversation (Student experience, 20%)**
 
 One question at a time, greets the student by name, friendly tone.
 Explains why a request was denied and what to do next.
 
-4. Knowledge Base use (Architecture, 15%)
+**4. Knowledge Base use (Architecture, 15%)**
 
 Mid-workflow, the agent pulls policy from the KB and cites it. Example: “Per SAP policy, you need a 2.0 GPA…”
 
-5. Guardrails
+**5. Guardrails**
 
 Never shows another student’s data.
 Stays on topic: politely redirects “write my essay” or “what’s the weather.”
