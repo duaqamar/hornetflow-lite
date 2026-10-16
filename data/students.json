@@ -1,0 +1,5 @@
+[
+  {"student_id":"1001001","full_name":"Alex Rivera","term":"Fall 2026","program":"Computer Science","enrollment_status":"Active"},
+  {"student_id":"1001002","full_name":"Jordan Lee","term":"Fall 2026","program":"Business Administration","enrollment_status":"Active"},
+  {"student_id":"1001003","full_name":"Taylor Morgan","term":"Spring 2026","program":"Psychology","enrollment_status":"Inactive"}
+]

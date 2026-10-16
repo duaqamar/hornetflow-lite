@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "hornetflow": {
+      "command": "/Users/sls-kjs/project/aws hackathon/.venv/bin/python",
+      "args": [
+        "/Users/sls-kjs/project/aws hackathon/mcp_server.py"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
