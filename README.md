@@ -85,3 +85,46 @@ This iteration uses a Bedrock Converse tool-calling agent loop. A managed Bedroc
 | 4 | Official-policy replacement, Knowledge Base integration and demo rehearsal |
 
 [Specification](tasks/spec.md) · [One-hour plan](tasks/plan.md) · [Build status](tasks/todo.md) · [Demo script](docs/demo.md)
+
+
+
+
+**Must-have (MVP, about 80% of the score)**
+
+1. Two complete workflows (Workflow completeness, 30%)
+
+Enrollment verification: asks for the ID → looks up the student → asks the purpose (e.g. landlord) → checks eligibility → generates the letter with a reference number.
+SAP appeal: asks for the ID → explains why aid was suspended (GPA, completion rate) → asks what happened → drafts the personal statement → student approves it → packages the appeal with a checklist of required items.
+
+2. Rule validation (Accuracy & validation, 25%)
+
+Not enrolled → no letter
+Account hold → blocked, with “contact the Registrar”
+Aid not suspended → no appeal needed
+GPA below 2.0 or completion below 67% → flagged
+Invalid student ID → handled politely
+
+The rules live in the Lambda, so the AI can’t make them up.
+
+3. Guided conversation (Student experience, 20%)
+
+One question at a time, greets the student by name, friendly tone.
+Explains why a request was denied and what to do next.
+
+4. Knowledge Base use (Architecture, 15%)
+
+Mid-workflow, the agent pulls policy from the KB and cites it. Example: “Per SAP policy, you need a 2.0 GPA…”
+
+5. Guardrails
+
+Never shows another student’s data.
+Stays on topic: politely redirects “write my essay” or “what’s the weather.”
+Nice-to-have (only after both workflows work end to end)
+Session status tracking: “What’s the status of HF-1234?” (a bonus on the sheet)
+Spanish support: the instructions say “respond in the student’s language.” It costs almost nothing and is a bonus on the sheet.
+Third workflow (e.g. change of major)
+PDF output saved to S3
+Demo features (Creativity & impact, 10%)
+A story at the start: “Students wait 5–7 days for this letter. HornetFlow does it in 60 seconds.”
+Show one success and one rejection (ID 1001 vs 1005). The rejection is what proves the validation works.
+An architecture diagram slide (it’s already in the README).
